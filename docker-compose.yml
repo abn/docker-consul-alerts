@@ -6,5 +6,7 @@ consul:
 consul-alerts:
   image: alectolytic/consul-alerts
   command: start --consul-addr=consul:8500
+  ports:
+    - 9000
   links:
     - consul:consul

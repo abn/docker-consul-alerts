@@ -3,6 +3,6 @@ MAINTAINER Arun Neelicattu <arun.neelicattu@gmail.com>
 
 COPY ./rootfs /
 
+EXPOSE 9000
 ENTRYPOINT ["/usr/bin/consul-alerts"]
-
-CMD ["start"]
+CMD ["start", "--alert-addr=0.0.0.0:9000"]
