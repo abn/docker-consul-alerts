@@ -1,0 +1,8 @@
+FROM scratch
+MAINTAINER Arun Neelicattu <arun.neelicattu@gmail.com>
+
+COPY ./rootfs /
+
+ENTRYPOINT ["/usr/bin/consul-alerts"]
+
+CMD ["start"]

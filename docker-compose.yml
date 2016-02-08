@@ -1,0 +1,10 @@
+consul:
+  image: alectolytic/consul
+  command: -server -client=0.0.0.0 -ui-dir=/usr/share/consul-ui -node consul -bootstrap
+  ports:
+    - 8500
+consul-alerts:
+  image: alectolytic/consul-alerts
+  command: start --consul-addr=consul:8500
+  links:
+    - consul:consul
